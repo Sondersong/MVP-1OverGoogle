@@ -7,14 +7,39 @@
     flex-flow: row wrap;
     padding: 0 2rem;
     .column {
-      flex: 50%;
       padding: 0 2rem;
+      float: left;
     }
     .column img {
       margin-top: 4rem;
       vertical-align: middle;
-      border-radius: 1.5rem;
+      border-radius: 10px;
+      transition: .5s;
     }
+    .column img:hover {
+      transform: scale(108%);
+      filter: drop-shadow(0 0 0.5rem orange);
+    }
+    @media screen and (max-width: 540px) {
+      .column {
+        flex: 100%;
+      }
+    }
+    @media screen and (min-width: 540px) and (max-width: 1300px) {
+      .column {
+        flex: 50%;
+      }
+    }
+    @media screen and (min-width: 1300px) {
+      .column {
+        flex: 25%;
+      }
+    }
+  }
+  #photoGrid:after {
+    content: "";
+    display: table;
+    clear: both;
   }
   #scaleBar {
     form {
