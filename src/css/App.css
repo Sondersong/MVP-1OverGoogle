@@ -1,9 +1,35 @@
+.App {
+  --highlight-color: red;
+  display: flex;
+  flex-flow: column nowrap; }
+  .App #photoGrid {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 2rem; }
+    .App #photoGrid .column {
+      flex: 50%;
+      padding: 0 2rem; }
+    .App #photoGrid .column img {
+      margin-top: 4rem;
+      vertical-align: middle;
+      border-radius: 1.5rem; }
+  .App #scaleBar {
+    max-width: 500px;
+    align-self: center; }
+    .App #scaleBar form {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      min-width: 320px; }
+
+body {
+  max-width: 1500px; }
+
 #root {
-  max-width: 1280px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
-}
+  text-align: center; }
 
 /* .logo {
   height: 6em;
@@ -17,7 +43,6 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 } */
-
 /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
