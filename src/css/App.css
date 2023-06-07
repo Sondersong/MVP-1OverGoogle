@@ -40,7 +40,7 @@
       margin-top: 4rem;
       vertical-align: middle;
       border-radius: 10px;
-      transition: .5s; }
+      transition: 0.5s; }
     .App #photoGrid .column img:hover {
       transform: scale(108%);
       filter: drop-shadow(0 0 0.5rem orange); }
@@ -63,12 +63,12 @@
     z-index: 63; }
     .App #editMenu img {
       position: fixed;
-      max-Width: 80%;
-      max-Height: 80%;
+      max-width: 80%;
+      max-height: 80%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(100%);
-      z-Index: 64;
+      z-index: 64;
       filter: drop-shadow(0 0 10rem grey); }
   .App #photoGrid:after {
     content: "";
@@ -122,3 +122,13 @@ body {
     animation: logo-spin infinite 20s linear;
   }
 } */
+@keyframes rainbow {
+  from {
+    border-image: linear-gradient(135deg, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1; }
+  50% {
+    border-image: linear-gradient(225deg, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1; }
+  to {
+    border-image: linear-gradient(135deg, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1; } }

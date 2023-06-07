@@ -58,11 +58,11 @@ function App() {
           </form>
         </div>
         <div id="uploadSection">
+          <h5>Upload</h5>
           <i
             className="fa-solid fa-upload fa-2xl"
             style={{ color: "white" }}
           ></i>
-          <h5>Upload</h5>
         </div>
       </div>
       <EditMenu activeImg={activeImg} setActiveImg={setActiveImg} />
