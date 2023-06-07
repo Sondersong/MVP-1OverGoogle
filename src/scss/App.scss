@@ -2,7 +2,40 @@
   --highlight-color: red;
   display: flex;
   flex-flow: column nowrap;
+
+  #titleBar {
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: gray;
+    height: 150px;
+    width: 100%;
+    z-index: 120;
+    form {
+      width: 400px;
+      margin: 0px;
+      padding: 20px;
+    }
+    i {
+      width: 30px;
+    }
+    h5 {
+      margin: 0px;
+      padding: 0px;
+    }
+    #uploadSection {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: end;
+      width: 150px;
+      padding: 20px;
+    }
+  }
   #photoGrid {
+    margin-top: 200px;
     display: flex;
     flex-flow: row wrap;
     padding: 0 2rem;
@@ -36,6 +69,25 @@
       }
     }
   }
+  #editMenu {
+    position: fixed;
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    z-index: 63;
+    img {
+      position: fixed;
+      max-Width: 80%;
+      max-Height: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(100%);
+      z-Index: 64;
+      filter: drop-shadow(0 0 10rem grey);
+    }
+  }
   #photoGrid:after {
     content: "";
     display: table;
@@ -55,13 +107,17 @@
 
 body {
   max-width: 1500px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #root {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
 }
 
 /* .logo {
@@ -91,3 +147,16 @@ body {
     animation: logo-spin infinite 20s linear;
   }
 } */
+
+// @keyframes blink {
+//   from {
+//     color: red;
+//   }
+//   to {
+//     color: white;
+//   }
+// }
+
+// .nukeButton {
+//   animation: blink infinite 2s linear;
+// }

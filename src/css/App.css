@@ -2,7 +2,34 @@
   --highlight-color: red;
   display: flex;
   flex-flow: column nowrap; }
+  .App #titleBar {
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: gray;
+    height: 150px;
+    width: 100%;
+    z-index: 120; }
+    .App #titleBar form {
+      width: 400px;
+      margin: 0px;
+      padding: 20px; }
+    .App #titleBar i {
+      width: 30px; }
+    .App #titleBar h5 {
+      margin: 0px;
+      padding: 0px; }
+    .App #titleBar #uploadSection {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: end;
+      width: 150px;
+      padding: 20px; }
   .App #photoGrid {
+    margin-top: 200px;
     display: flex;
     flex-flow: row wrap;
     padding: 0 2rem; }
@@ -26,6 +53,23 @@
     @media screen and (min-width: 1300px) {
       .App #photoGrid .column {
         flex: 25%; } }
+  .App #editMenu {
+    position: fixed;
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    z-index: 63; }
+    .App #editMenu img {
+      position: fixed;
+      max-Width: 80%;
+      max-Height: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(100%);
+      z-Index: 64;
+      filter: drop-shadow(0 0 10rem grey); }
   .App #photoGrid:after {
     content: "";
     display: table;
@@ -40,13 +84,17 @@
       min-width: 320px; }
 
 body {
-  max-width: 1500px; }
+  max-width: 1500px;
+  padding: 0px;
+  margin: 0px; }
 
 #root {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center; }
 
 /* .logo {
   height: 6em;

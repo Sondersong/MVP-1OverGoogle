@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./css/App.css";
 import Column from "./Column";
+import EditMenu from "./EditMenu";
 
 function App() {
   const [gridScale, setGridScale] = useState([false, 50]);
@@ -33,35 +34,87 @@ function App() {
   return (
     <div className="App">
       <div id="titleBar">
-        <h1>
+        <h3>
           1/<sub>10</sub>
           <sup>100</sup>sec
-        </h1>
-      </div>
-      <div id="scaleBar">
+        </h3>
         <form>
-          <label htmlFor="scale">- Photo Size -</label>
-          <input
-            type="range"
-            name="scale"
-            id="scale"
-            min="0"
-            max="50"
-            step="25"
-            defaultValue="25"
-            onChange={changeScale}
-          />
+          <label htmlFor="searchBar">Search</label>
+          <input name="searchBar" type="text"></input>
         </form>
+        <div id="scaleBar">
+          <form>
+            <label htmlFor="scale">- Photo Size -</label>
+            <input
+              type="range"
+              name="scale"
+              id="scale"
+              min="0"
+              max="50"
+              step="25"
+              defaultValue="25"
+              onChange={changeScale}
+            />
+          </form>
+        </div>
+        <div id="uploadSection">
+          <i
+            className="fa-solid fa-upload fa-2xl"
+            style={{ color: "white" }}
+          ></i>
+          <h5>Upload</h5>
+        </div>
       </div>
+      <EditMenu activeImg={activeImg} setActiveImg={setActiveImg} />
       <div id="photoGrid">
-        <Column gridScale={gridScale} columnVar={column0} activeImg={activeImg} setActiveImg={setActiveImg}/>
-        <Column gridScale={gridScale} columnVar={column2} activeImg={activeImg} setActiveImg={setActiveImg}/>
-        <Column gridScale={gridScale} columnVar={column1} activeImg={activeImg} setActiveImg={setActiveImg}/>
-        <Column gridScale={gridScale} columnVar={column3} activeImg={activeImg} setActiveImg={setActiveImg}/>
-        <Column gridScale={gridScale} columnVar={column0} activeImg={activeImg} setActiveImg={setActiveImg}/>
-        <Column gridScale={gridScale} columnVar={column2} activeImg={activeImg} setActiveImg={setActiveImg}/>
-        <Column gridScale={gridScale} columnVar={column1} activeImg={activeImg} setActiveImg={setActiveImg}/>
-        <Column gridScale={gridScale} columnVar={column3} activeImg={activeImg} setActiveImg={setActiveImg}/>
+        <Column
+          gridScale={gridScale}
+          columnVar={column0}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column2}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column1}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column3}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column0}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column2}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column1}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column3}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
       </div>
     </div>
   );
