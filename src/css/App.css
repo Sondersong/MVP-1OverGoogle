@@ -1,7 +1,8 @@
 .App {
   --highlight-color: red;
   display: flex;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  width: 100%; }
   .App #titleBar {
     position: fixed;
     display: flex;
@@ -84,51 +85,14 @@
       min-width: 320px; }
 
 body {
-  max-width: 1500px;
+  max-width: 100%;
+  width: 100%;
   padding: 0px;
   margin: 0px; }
 
 #root {
-  max-width: 1500px;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
   display: flex;
   flex-flow: nowrap column;
   align-items: center; }
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
-@keyframes rainbow {
-  from {
-    border-image: linear-gradient(135deg, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
-    border-image-slice: 1; }
-  50% {
-    border-image: linear-gradient(225deg, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
-    border-image-slice: 1; }
-  to {
-    border-image: linear-gradient(135deg, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
-    border-image-slice: 1; } }

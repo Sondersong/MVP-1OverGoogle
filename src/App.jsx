@@ -5,7 +5,7 @@ import EditMenu from "./EditMenu";
 
 function App() {
   const [gridScale, setGridScale] = useState([false, 50]);
-  const [activeImg, setActiveImg] = useState(false);
+  const [activeImg, setActiveImg] = useState(0);
   let imgColumns = [];
   function assignPhotos() {
     let currentColumn = 0;
@@ -34,10 +34,7 @@ function App() {
   return (
     <div className="App">
       <div id="titleBar">
-        <h3>
-          1/<sub>10</sub>
-          <sup>100</sup>sec
-        </h3>
+        <h3>one / googol sec.</h3>
         <form>
           <label htmlFor="searchBar">Search</label>
           <input name="searchBar" type="text"></input>
@@ -65,7 +62,7 @@ function App() {
           ></i>
         </div>
       </div>
-      {!activeImg ? (
+      {activeImg === 0 ? (
         <div id="photoGrid">
           <Column
             gridScale={gridScale}
@@ -117,7 +114,10 @@ function App() {
           />
         </div>
       ) : (
-        <EditMenu activeImg={activeImg} setActiveImg={setActiveImg} />
+        <div>
+          <p>Is this working</p>
+          <EditMenu activeImg={activeImg} setActiveImg={setActiveImg} />
+        </div>
       )}
     </div>
   );
