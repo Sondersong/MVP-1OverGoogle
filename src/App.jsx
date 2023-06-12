@@ -65,57 +65,60 @@ function App() {
           ></i>
         </div>
       </div>
-      <EditMenu activeImg={activeImg} setActiveImg={setActiveImg} />
-      <div id="photoGrid">
-        <Column
-          gridScale={gridScale}
-          columnVar={column0}
-          activeImg={activeImg}
-          setActiveImg={setActiveImg}
-        />
-        <Column
-          gridScale={gridScale}
-          columnVar={column2}
-          activeImg={activeImg}
-          setActiveImg={setActiveImg}
-        />
-        <Column
-          gridScale={gridScale}
-          columnVar={column1}
-          activeImg={activeImg}
-          setActiveImg={setActiveImg}
-        />
-        <Column
-          gridScale={gridScale}
-          columnVar={column3}
-          activeImg={activeImg}
-          setActiveImg={setActiveImg}
-        />
-        <Column
-          gridScale={gridScale}
-          columnVar={column0}
-          activeImg={activeImg}
-          setActiveImg={setActiveImg}
-        />
-        <Column
-          gridScale={gridScale}
-          columnVar={column2}
-          activeImg={activeImg}
-          setActiveImg={setActiveImg}
-        />
-        <Column
-          gridScale={gridScale}
-          columnVar={column1}
-          activeImg={activeImg}
-          setActiveImg={setActiveImg}
-        />
-        <Column
-          gridScale={gridScale}
-          columnVar={column3}
-          activeImg={activeImg}
-          setActiveImg={setActiveImg}
-        />
-      </div>
+      {!activeImg ? (
+        <div id="photoGrid">
+          <Column
+            gridScale={gridScale}
+            columnVar={column0}
+            activeImg={activeImg}
+            setActiveImg={setActiveImg}
+          />
+          <Column
+            gridScale={gridScale}
+            columnVar={column2}
+            activeImg={activeImg}
+            setActiveImg={setActiveImg}
+          />
+          <Column
+            gridScale={gridScale}
+            columnVar={column1}
+            activeImg={activeImg}
+            setActiveImg={setActiveImg}
+          />
+          <Column
+            gridScale={gridScale}
+            columnVar={column3}
+            activeImg={activeImg}
+            setActiveImg={setActiveImg}
+          />
+          <Column
+            gridScale={gridScale}
+            columnVar={column0}
+            activeImg={activeImg}
+            setActiveImg={setActiveImg}
+          />
+          <Column
+            gridScale={gridScale}
+            columnVar={column2}
+            activeImg={activeImg}
+            setActiveImg={setActiveImg}
+          />
+          <Column
+            gridScale={gridScale}
+            columnVar={column1}
+            activeImg={activeImg}
+            setActiveImg={setActiveImg}
+          />
+          <Column
+            gridScale={gridScale}
+            columnVar={column3}
+            activeImg={activeImg}
+            setActiveImg={setActiveImg}
+          />
+        </div>
+      ) : (
+        <EditMenu activeImg={activeImg} setActiveImg={setActiveImg} />
+      )}
     </div>
   );
 }
