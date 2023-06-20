@@ -6,6 +6,7 @@ import EditMenu from "./EditMenu";
 function App() {
   const [gridScale, setGridScale] = useState([false, 50]);
   const [activeImg, setActiveImg] = useState(0);
+  const [nukeTime, setNukeTime] = useState(false);
   let imgColumns = [];
   function assignPhotos() {
     let currentColumn = 0;
@@ -114,8 +115,7 @@ function App() {
           />
         </div>
       ) : (
-        <div>
-          <p>Is this working</p>
+        <div style={{ padding: "100px", height: "1000px" }}>
           <EditMenu activeImg={activeImg} setActiveImg={setActiveImg} />
         </div>
       )}
