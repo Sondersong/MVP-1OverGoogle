@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./css/App.css";
 import Column from "./Column";
 import EditMenu from "./EditMenu";
+import MenuBar from "./MenuBar"
 
 function GallaryView() {
   const [gridScale, setGridScale] = useState([false, 50]);
@@ -33,35 +34,7 @@ function GallaryView() {
   }
   return (
     <div className="App">
-      <div id="titleBar">
-        <h3>one / googol sec.</h3>
-        <form>
-          <label htmlFor="searchBar">Search</label>
-          <input name="searchBar" type="text"></input>
-        </form>
-        <div id="scaleBar">
-          <form>
-            <label htmlFor="scale">- Photo Size -</label>
-            <input
-              type="range"
-              name="scale"
-              id="scale"
-              min="0"
-              max="50"
-              step="25"
-              defaultValue="25"
-              onChange={changeScale}
-            />
-          </form>
-        </div>
-        <div id="uploadSection">
-          <h5>Upload</h5>
-          <i
-            className="fa-solid fa-upload fa-2xl"
-            style={{ color: "white" }}
-          ></i>
-        </div>
-      </div>
+      <MenuBar changeScale={changeScale} />
       {activeImg === 0 ? (
         <div id="photoGrid">
           <Column

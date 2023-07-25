@@ -3,7 +3,7 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100%; }
-  .App #titleBar {
+  .App #menuBar {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -11,18 +11,18 @@
     background-color: gray;
     height: 150px;
     width: 100%; }
-    .App #titleBar h3 {
+    .App #menuBar h3 {
       font-size: 32px; }
-    .App #titleBar form {
+    .App #menuBar form {
       width: 400px;
       margin: 0px;
       padding: 20px; }
-    .App #titleBar i {
+    .App #menuBar i {
       width: 30px; }
-    .App #titleBar h5 {
+    .App #menuBar h5 {
       margin: 0px;
       padding: 0px; }
-    .App #titleBar #uploadSection {
+    .App #menuBar #uploadSection {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
