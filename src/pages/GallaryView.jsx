@@ -3,7 +3,6 @@ import "../css/App.css";
 import Column from "../widgets/Column";
 import EditMenu from "./EditMenu";
 import MenuBar from "../widgets/MenuBar"
-
 function GallaryView() {
   const [gridScale, setGridScale] = useState([false, 50]);
   const [activeImg, setActiveImg] = useState(0);
