@@ -5,13 +5,15 @@ import "./css/App.css";
 
 function App() {
   return (
-    <Router>
+    <div className="App">
+      <Router>
         <Routes>
-          <Route path='/' element={< GallaryView />} />
-          <Route path='/editMenu' element={< EditMenu />} />
+          <Route path="/" element={<GallaryView />} />
+          <Route path="/editMenu" element={<EditMenu />} />
         </Routes>
       </Router>
-  )
+    </div>
+  );
 }
 
 export default App;

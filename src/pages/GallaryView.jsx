@@ -1,8 +1,7 @@
 import { useState } from "react";
 import "../css/App.css";
 import Column from "../widgets/Column";
-import EditMenu from "./EditMenu";
-import MenuBar from "../widgets/MenuBar"
+import MenuBar from "../widgets/MenuBar";
 function GallaryView() {
   const [gridScale, setGridScale] = useState([false, 50]);
   const [activeImg, setActiveImg] = useState(0);
@@ -32,40 +31,34 @@ function GallaryView() {
     }
   }
   return (
-    <div className="App">
+    <div className="galleryView">
       <MenuBar changeScale={changeScale} />
-      {activeImg === 0 ? (
-        <div id="photoGrid">
-          <Column
-            gridScale={gridScale}
-            columnVar={column0}
-            activeImg={activeImg}
-            setActiveImg={setActiveImg}
-          />
-          <Column
-            gridScale={gridScale}
-            columnVar={column2}
-            activeImg={activeImg}
-            setActiveImg={setActiveImg}
-          />
-          <Column
-            gridScale={gridScale}
-            columnVar={column1}
-            activeImg={activeImg}
-            setActiveImg={setActiveImg}
-          />
-          <Column
-            gridScale={gridScale}
-            columnVar={column3}
-            activeImg={activeImg}
-            setActiveImg={setActiveImg}
-          />
-        </div>
-      ) : (
-        <div style={{ padding: "100px", height: "1000px" }}>
-          <EditMenu activeImg={activeImg} setActiveImg={setActiveImg} />
-        </div>
-      )}
+      <div id="photoGrid">
+        <Column
+          gridScale={gridScale}
+          columnVar={column0}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column2}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column1}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+        <Column
+          gridScale={gridScale}
+          columnVar={column3}
+          activeImg={activeImg}
+          setActiveImg={setActiveImg}
+        />
+      </div>
     </div>
   );
 }
