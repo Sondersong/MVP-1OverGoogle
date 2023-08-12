@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-function MenuBar({ changeScale }) {
+function MenuBar({ changeScale, uploadBool, setUploadBool }) {
+
   return (
     <div id="menuBar">
       <h3>one / googol sec.</h3>
@@ -22,7 +23,7 @@ function MenuBar({ changeScale }) {
           />
         </form>
       </div>
-      <div id="uploadSection">
+      <div id="uploadSection" onClick={() => {setUploadBool(!uploadBool)}}>
         <h5>Upload</h5>
         <i className="fa-solid fa-upload fa-2xl" style={{ color: "white" }}></i>
       </div>

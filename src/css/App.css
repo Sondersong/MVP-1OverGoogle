@@ -29,6 +29,16 @@
       justify-content: end;
       width: 150px;
       padding: 20px; }
+    .App #menuBar #uploadSection :hover {
+      cursor: pointer; }
+  .App .ImageUpload {
+    max-width: 800px;
+    max-height: 500px;
+    background-color: lightgray;
+    padding: 8px;
+    margin: auto;
+    width: 50%;
+    z-index: 20; }
   .App #photoGrid {
     margin-top: 0px;
     display: flex;

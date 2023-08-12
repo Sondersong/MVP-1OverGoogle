@@ -4,7 +4,6 @@
   flex-flow: column nowrap;
   width: 100%;
   #menuBar {
-    // position: fixed;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -12,7 +11,6 @@
     background-color: gray;
     height: 150px;
     width: 100%;
-    // z-index: 120;
     h3 {
       font-size: 32px;
     }
@@ -36,6 +34,18 @@
       width: 150px;
       padding: 20px;
     }
+    #uploadSection :hover {
+      cursor: pointer
+    }
+  }
+  .ImageUpload {
+    max-width: 800px;
+    max-height: 500px;
+    background-color: lightgray;
+    padding: 8px;
+    margin: auto;
+    width: 50%;
+    z-index: 20;
   }
   #photoGrid {
     margin-top: 0px;
@@ -106,80 +116,3 @@ body {
   flex-flow: nowrap column;
   align-items: center;
 }
-
-// /* .logo {
-//   height: 6em;
-//   padding: 1.5em;
-//   will-change: filter;
-//   transition: filter 300ms;
-// }
-// .logo:hover {
-//   filter: drop-shadow(0 0 2em #646cffaa);
-// }
-// .logo.react:hover {
-//   filter: drop-shadow(0 0 2em #61dafbaa);
-// } */
-
-// /* @keyframes logo-spin {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
-
-// @media (prefers-reduced-motion: no-preference) {
-//   a:nth-of-type(2) .logo {
-//     animation: logo-spin infinite 20s linear;
-//   }
-// } */
-
-// // @keyframes blink {
-// //   from {
-// //     color: red;
-// //   }
-// //   to {
-// //     color: white;
-// //   }
-// // }
-
-// // .nukeButton {
-// //   animation: blink infinite 2s linear;
-// // }
-
-// @keyframes rainbow {
-//   from {
-//     border-image: linear-gradient(
-//       135deg,
-//       #b827fc 0%,
-//       #2c90fc 25%,
-//       #b8fd33 50%,
-//       #fec837 75%,
-//       #fd1892 100%
-//     );
-//     border-image-slice: 1;
-//   }
-//   50% {
-//     border-image: linear-gradient(
-//       225deg,
-//       #b827fc 0%,
-//       #2c90fc 25%,
-//       #b8fd33 50%,
-//       #fec837 75%,
-//       #fd1892 100%
-//     );
-//     border-image-slice: 1;
-//   }
-//   to {
-//     border-image: linear-gradient(
-//       135deg,
-//       #b827fc 0%,
-//       #2c90fc 25%,
-//       #b8fd33 50%,
-//       #fec837 75%,
-//       #fd1892 100%
-//     );
-//     border-image-slice: 1;
-//   }
-// }

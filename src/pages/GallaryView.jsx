@@ -2,9 +2,11 @@ import { useState } from "react";
 import "../css/App.css";
 import Column from "../widgets/Column";
 import MenuBar from "../widgets/MenuBar";
+import ImageUpload from "../widgets/ImageUpload";
 function GallaryView() {
   const [gridScale, setGridScale] = useState([false, 50]);
   const [activeImg, setActiveImg] = useState(0);
+  const [uploadBool, setUploadBool] = useState(false);
   let imgColumns = [];
   function assignPhotos() {
     let currentColumn = 0;
@@ -32,7 +34,12 @@ function GallaryView() {
   }
   return (
     <div className="galleryView">
-      <MenuBar changeScale={changeScale} />
+      <MenuBar
+        changeScale={changeScale}
+        setUploadBool={setUploadBool}
+        uploadBool={uploadBool}
+      />
+      {uploadBool && <ImageUpload />}
       <div id="photoGrid">
         <Column
           gridScale={gridScale}
